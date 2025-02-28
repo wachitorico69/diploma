@@ -30,9 +30,9 @@ form {
     flex-direction: column;
     background-color: #d9dfe9;
     border: .8em solid white;
-    padding: 4em;
-    width: 40em;
-    height: 30em;
+    padding: 2em;
+    width: 35em;
+    height: 25em;
     margin-bottom: 2em;
     border-radius: 1em;
 }
