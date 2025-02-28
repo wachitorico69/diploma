@@ -21,23 +21,36 @@ ctx.drawImage(img3, 320, 420, 223, 82);
 
 ctx.font = "bold 30px raleway";
 ctx.textAlign = "center";   
-ctx.fillText("Universidad Autónoma de Aguascalientes", 425, 190); 
-ctx.fillText("RECONOCIMIENTO", 425, 240);
+ctx.fillText("Universidad Autónoma de Aguascalientes", 425, 175); 
+ctx.fillText("RECONOCIMIENTO", 425, 220);
 
 let nombre = localStorage.getItem("nombre");
 ctx.font = "25px raleway";
 ctx.textAlign = "center";   
-ctx.fillText(nombre, 425, 300);
+ctx.fillText(nombre, 425, 280);
 
 ctx.strokeStyle = "red";
-ctx.moveTo(150, 310);
-ctx.lineTo(700, 310);
+ctx.moveTo(150, 290);
+ctx.lineTo(700, 290);
 ctx.stroke();
 
 let curso = localStorage.getItem("curso");
 ctx.font = "20px raleway";
 ctx.textAlign = "center";   
-ctx.fillText("Por completar el curso: " + curso + " 2025", 425, 350);
+ctx.fillText("Por completar con sacrificio y orgullo el curso:", 425, 330);
+ctx.fillText(curso, 425, 355);
+
+var today = new Date();
+var dd = String(today.getDate()).padStart(2, '0');
+var mm = today.getMonth();
+var yyyy = today.getFullYear();
+
+var meses = ["enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto", "septiembre", "octubre", "noviembre", "diciembre"];
+
+ctx.font = "16px raleway";
+ctx.textAlign = "center";  
+today = dd + " de " + meses[mm] + " del " + yyyy;
+ctx.fillText(today + " Aguascalientes, Ags.", 425, 390);
 
 ctx.font = "15px raleway";
 ctx.textAlign = "center";   
