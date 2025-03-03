@@ -11,13 +11,24 @@ function guardarDatos() {
 
 const canvas = document.getElementById("canvas");
 const ctx = canvas.getContext("2d");
-const img1 = document.getElementById("uaa");
-const img2 = document.getElementById("ccbas");
-const img3 = document.getElementById("firma");
 
-ctx.drawImage(img1, 50, 40, 111, 90);
-ctx.drawImage(img2, 620, 35, 179, 100);
-ctx.drawImage(img3, 320, 420, 223, 82);
+const img1 = new Image();
+img1.src = "/images/logo1.png"; // Asegúrate de usar la ruta correcta
+img1.onload = function () {
+    ctx.drawImage(img1, 50, 40, 111, 90);
+};
+
+const img2 = new Image();
+img2.src = "/images/logo2.png";
+img2.onload = function () {
+    ctx.drawImage(img2, 620, 35, 179, 100);
+};
+
+const img3 = new Image();
+img3.src = "/images/firma.png";
+img3.onload = function () {
+    ctx.drawImage(img3, 320, 420, 223, 82);
+};
 
 ctx.font = "bold 30px raleway";
 ctx.textAlign = "center";   
